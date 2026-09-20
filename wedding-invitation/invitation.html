@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>龙腾 &amp; 刘敏敏 · 婚礼邀请函</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+:root {
+  --cream: #FAF7F0;
+  --cream2: #F4F1E6;
+  --green: #2D4A32;
+  --green-deep: #23391F;
+  --green-mid: #4A6B4E;
+  --green-soft: #7D967F;
+  --green-pale: #E3EAD9;
+  --green-bg: #EDF2E6;
+  --text-dark: #2C3A2E;
+  --text-mid: #5E6E60;
+  --text-soft: #93A096;
+  --line: rgba(45, 74, 50, 0.16);
+}
+
+html, body {
+  height: 100%;
+  font-family: "Songti SC", "STSong", "SimSun", "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 460px; margin: 0 auto; position: relative; }
+
+/* ============ 一、全屏主图封面 ============ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 620px;
+  max-height: 900px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.hero-img {
+  position: absolute; inset: 0;
+  background-image: url('photos/photo3.jpg');
+  background-size: cover;
+  background-position: center 38%;
+  transform: scale(1.02);
+  animation: heroZoom 16s ease-out forwards;
+}
+@keyframes heroZoom {
+  from { transform: scale(1.10); }
+  to   { transform: scale(1.02); }
+}
+.hero-mask {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(20,28,20,0.42) 0%, rgba(20,28,20,0.05) 26%, rgba(20,28,20,0.10) 52%, rgba(20,28,20,0.78) 100%);
+}
+.hero-content {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-end;
+  padding: 0 26px 7.5vh;
+  text-align: center;
+  color: #FAF7F0;
+}
+.hero-en {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 11.5px; letter-spacing: 6px;
+  opacity: 0.92; margin-bottom: 16px;
+}
+.hero-vline {
+  width: 1px; height: 46px;
+  background: rgba(250, 247, 240, 0.72);
+  margin-bottom: 20px;
+}
+.hero-names {
+  font-size: 44px; font-weight: 400;
+  letter-spacing: 5px; line-height: 1.3;
+  margin-bottom: 18px;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.42);
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; white-space: nowrap;
+}
+.hero-names .amp {
+  font-family: 'Georgia', serif;
+  font-size: 26px; opacity: 0.9;
+  font-style: italic;
+}
+.hero-sub {
+  font-size: 15.5px; letter-spacing: 5px;
+  opacity: 0.95; margin-bottom: 32px;
+}
+.hero-vline2 {
+  width: 1px; height: 40px;
+  background: rgba(250, 247, 240, 0.6);
+  margin-bottom: 16px;
+}
+.hero-date {
+  font-family: 'Georgia', serif;
+  font-size: 15px; letter-spacing: 5px; opacity: 0.92;
+}
+.hero-arrow {
+  margin-top: 22px; opacity: 0.75;
+  animation: bounce 2.2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(7px); }
+}
+
+/* ============ 二、倒计时（深绿块） ============ */
+.count-sec {
+  background: var(--green);
+  padding: 52px 26px 46px;
+  text-align: center;
+  color: var(--cream);
+}
+.sec-en {
+  font-family: 'Georgia', serif;
+  font-size: 12px; letter-spacing: 7px;
+  opacity: 0.85; margin-bottom: 14px;
+}
+.sec-cn-lg {
+  font-size: 27px; letter-spacing: 7px;
+  font-weight: 400; margin-bottom: 20px;
+}
+.sec-rule {
+  width: 62px; height: 1px;
+  background: currentColor; opacity: 0.45;
+  margin: 0 auto 30px;
+}
+.cd-grid {
+  display: flex; justify-content: center; gap: 11px;
+  margin-bottom: 28px;
+}
+.cd-item {
+  width: 66px; padding: 15px 0 12px;
+  border: 1px solid rgba(250, 247, 240, 0.38);
+  border-radius: 8px;
+}
+.cd-num {
+  font-family: 'Georgia', serif;
+  font-size: 30px; line-height: 1.05;
+  margin-bottom: 4px; letter-spacing: 1px;
+}
+.cd-unit { font-size: 12px; letter-spacing: 2px; opacity: 0.86; }
+.count-en {
+  font-family: 'Georgia', serif;
+  font-style: italic; font-size: 14.5px;
+  letter-spacing: 1px; opacity: 0.88;
+}
+
+/* ============ 通用浅色段 ============ */
+.sec {
+  padding: 54px 26px 50px;
+  text-align: center;
+}
+.sec.cream { background: var(--cream); }
+.sec.greenbg { background: var(--green-bg); }
+.sec .sec-en,
+.sec .sec-cn-lg { color: var(--green); }
+.sec .sec-rule { background: var(--green); opacity: 0.35; }
+
+/* ============ 三、婚礼时间 ============ */
+.date-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px 24px 34px;
+  box-shadow: 0 6px 24px rgba(45, 74, 50, 0.07);
+  position: relative;
+}
+.date-year {
+  font-family: 'Georgia', serif;
+  font-size: 14px; color: var(--text-soft);
+  letter-spacing: 4px; margin-bottom: 10px;
+}
+.date-main {
+  display: flex; align-items: baseline;
+  justify-content: center; gap: 12px;
+  margin-bottom: 14px;
+}
+.date-month {
+  font-family: 'Georgia', serif;
+  font-size: 27px; color: var(--green);
+  letter-spacing: 1px;
+}
+.date-day {
+  font-family: 'Georgia', serif;
+  font-size: 74px; color: var(--green);
+  line-height: 0.9; font-weight: 400;
+}
+.date-lunar {
+  font-size: 14.5px; color: var(--text-mid);
+  letter-spacing: 2px; margin-bottom: 26px;
+}
+.date-div {
+  height: 1px; background: var(--line);
+  margin: 0 auto 24px; width: 78%;
+}
+.time-row {
+  display: flex; align-items: center;
+  justify-content: center; gap: 13px;
+}
+.time-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--green-pale);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.time-info { text-align: left; }
+.time-en {
+  font-family: 'Georgia', serif;
+  font-size: 11px; color: var(--text-soft);
+  letter-spacing: 3px; margin-bottom: 5px;
+}
+.time-cn {
+  font-size: 20px; color: var(--green);
+  letter-spacing: 2px;
+}
+
+/* ============ 四、照片（竖排单列） ============ */
+.photo-list { display: flex; flex-direction: column; gap: 18px; }
+.photo-card {
+  border-radius: 14px; overflow: hidden;
+  box-shadow: 0 8px 26px rgba(45, 74, 50, 0.11);
+  background: #fff;
+  line-height: 0;
+}
+.photo-card img {
+  width: 100%; height: auto; display: block;
+}
+.quote-after {
+  margin-top: 34px;
+  font-size: 15px; line-height: 2.15;
+  color: var(--text-mid); letter-spacing: 2px;
+}
+.quote-after p { margin: 3px 0; }
+
+/* ============ 五、婚礼地点 ============ */
+.venue-card {
+  background: #fff; border-radius: 14px;
+  padding: 36px 24px 32px;
+  box-shadow: 0 6px 24px rgba(45, 74, 50, 0.07);
+}
+.venue-name {
+  font-size: 25px; color: var(--green);
+  letter-spacing: 3px; margin-bottom: 10px;
+}
+.venue-hall {
+  font-size: 16px; color: var(--text-mid);
+  letter-spacing: 2px; margin-bottom: 24px;
+}
+.venue-addr {
+  background: var(--green-pale);
+  border-radius: 10px; padding: 18px 20px;
+  display: flex; align-items: flex-start; gap: 11px;
+  text-align: left;
+}
+.venue-addr svg { flex-shrink: 0; margin-top: 2px; }
+.venue-addr-text {
+  font-size: 15px; color: var(--text-dark);
+  line-height: 1.75; letter-spacing: 1px;
+}
+
+/* ============ 六、结尾文案 ============ */
+.ending { padding: 56px 26px 46px; text-align: center; }
+.ending-date {
+  font-family: 'Georgia', serif;
+  font-size: 14px; color: var(--text-soft);
+  letter-spacing: 5px; margin-bottom: 44px;
+}
+.ending-en {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 16.5px; line-height: 2.2;
+  color: var(--green); letter-spacing: 0.5px;
+  margin-bottom: 30px;
+}
+.ending-cn {
+  font-size: 15.5px; line-height: 2.15;
+  color: var(--text-mid); letter-spacing: 2px;
+  margin-bottom: 36px;
+}
+.ending-rule {
+  width: 74px; height: 1px;
+  background: var(--green); opacity: 0.3;
+  margin: 0 auto 36px;
+}
+.ending-invite {
+  font-size: 27px; color: var(--green);
+  letter-spacing: 7px; margin-bottom: 20px;
+}
+.ending-sign {
+  font-size: 15.5px; color: var(--text-mid);
+  letter-spacing: 3px; margin-bottom: 40px;
+}
+.ending-final {
+  font-family: 'Georgia', serif;
+  font-size: 14px; color: var(--text-soft);
+  letter-spacing: 5px;
+}
+
+/* ============ 音乐按钮 ============ */
+.music-btn {
+  position: fixed; top: 16px; right: 16px;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(250, 247, 240, 0.88);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(45, 74, 50, 0.22);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; cursor: pointer;
+  box-shadow: 0 3px 14px rgba(20, 28, 20, 0.22);
+  transition: transform 0.2s;
+}
+.music-btn:active { transform: scale(0.92); }
+.music-btn.playing .music-note { animation: spin 3.4s linear infinite; }
+.music-note { display: block; color: var(--green); font-size: 17px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* 入场 */
+.fade { opacity: 0; transform: translateY(24px);
+  transition: opacity 1s ease, transform 1s ease; }
+.fade.show { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 380px) {
+  .hero-names { font-size: 37px; letter-spacing: 3px; }
+  .hero-names .amp { font-size: 22px; }
+  .date-day { font-size: 64px; }
+  .cd-item { width: 60px; padding: 13px 0 10px; }
+  .cd-num { font-size: 26px; }
+  .venue-name { font-size: 22px; }
+  .ending-invite { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="music-btn" id="musicBtn" onclick="toggleMusic()">
+  <span class="music-note">♪</span>
+</div>
+<audio id="bgm" src="audio/bgm.mp3" loop preload="auto"></audio>
+
+<div class="wrap">
+
+  <!-- ================= 一、封面 ================= -->
+  <div class="hero">
+    <div class="hero-img"></div>
+    <div class="hero-mask"></div>
+    <div class="hero-content">
+      <div class="hero-en">SAVE THE DATE</div>
+      <div class="hero-vline"></div>
+      <div class="hero-names">龙腾 <span class="amp">&amp;</span> 刘敏敏</div>
+      <div class="hero-sub">我们结婚啦</div>
+      <div class="hero-vline2"></div>
+      <div class="hero-date">2026 . 10 . 25</div>
+      <div class="hero-arrow">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FAF7F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 4 V20"/><path d="M5 13 L12 20 L19 13"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 二、倒计时 ================= -->
+  <div class="count-sec">
+    <div class="sec-en">COUNTING DOWN</div>
+    <div class="sec-cn-lg">期待重逢</div>
+    <div class="sec-rule"></div>
+    <div class="cd-grid">
+      <div class="cd-item"><div class="cd-num" id="cdD">--</div><div class="cd-unit">天</div></div>
+      <div class="cd-item"><div class="cd-num" id="cdH">--</div><div class="cd-unit">时</div></div>
+      <div class="cd-item"><div class="cd-num" id="cdM">--</div><div class="cd-unit">分</div></div>
+      <div class="cd-item"><div class="cd-num" id="cdS">--</div><div class="cd-unit">秒</div></div>
+    </div>
+    <div class="count-en">Looking forward to seeing you</div>
+  </div>
+
+  <!-- ================= 三、婚礼时间 ================= -->
+  <div class="sec cream">
+    <div class="sec-en">WEDDING DATE</div>
+    <div class="sec-cn-lg">婚礼时间</div>
+    <div class="sec-rule"></div>
+
+    <div class="date-card fade">
+      <div class="date-year">2 0 2 6</div>
+      <div class="date-main">
+        <div class="date-month">October</div>
+        <div class="date-day">25</div>
+      </div>
+      <div class="date-lunar">农历丙午年 九月十六 · 星期日</div>
+      <div class="date-div"></div>
+      <div class="time-row">
+        <div class="time-icon">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2D4A32" stroke-width="1.7" stroke-linecap="round">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15.5 14.5"/>
+          </svg>
+        </div>
+        <div class="time-info">
+          <div class="time-en">CEREMONY TIME</div>
+          <div class="time-cn">中午 11:58</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 四、幸福瞬间 ================= -->
+  <div class="sec cream" style="padding-top: 20px;">
+    <div class="sec-en">OUR STORY</div>
+    <div class="sec-cn-lg">幸福瞬间</div>
+    <div class="sec-rule"></div>
+
+    <div class="photo-list">
+      <div class="photo-card fade"><img src="photos/photo1.jpg" alt=""></div>
+      <div class="photo-card fade"><img src="photos/photo2.jpg" alt=""></div>
+      <div class="photo-card fade"><img src="photos/photo4.jpg" alt=""></div>
+      <div class="photo-card fade"><img src="photos/photo5.jpg" alt=""></div>
+    </div>
+
+    <div class="quote-after">
+      <p>山水一程 · 三生有幸</p>
+      <p>愿与君共赴白头 · 不离不弃</p>
+    </div>
+  </div>
+
+  <!-- ================= 五、婚礼地点 ================= -->
+  <div class="sec greenbg">
+    <div class="sec-en">WEDDING VENUE</div>
+    <div class="sec-cn-lg">婚礼地点</div>
+    <div class="sec-rule"></div>
+
+    <div class="venue-card fade">
+      <div class="venue-name">常德华邦国际大酒店</div>
+      <div class="venue-hall">1楼 · 江南厅</div>
+      <div class="venue-addr">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2D4A32" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22 C12 22 20 15.5 20 10 A8 8 0 1 0 4 10 C4 15.5 12 22 12 22 Z"/>
+          <circle cx="12" cy="10" r="2.6"/>
+        </svg>
+        <div class="venue-addr-text">
+          湖南省常德市鼎城区<br>桃花源路与花溪路交汇处
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 六、结尾 ================= -->
+  <div class="ending cream" style="background: var(--cream);">
+    <div class="ending-date">2026.10.25</div>
+
+    <div class="ending-en">
+      <p>" Two souls, one heart.</p>
+      <p>Two lives, one love. "</p>
+    </div>
+
+    <div class="ending-cn">
+      <p>愿我们的故事</p>
+      <p>从这一天开始，写下更长久的篇章</p>
+    </div>
+
+    <div class="ending-rule"></div>
+    <div class="ending-invite">诚邀莅临</div>
+    <div class="ending-sign">龙腾 &amp; 刘敏敏 · 敬邀</div>
+    <div class="ending-final">2026.10.25</div>
+  </div>
+
+</div>
+
+<script>
+/* ============ 倒计时 ============ */
+(function () {
+  const TARGET = new Date('2026-10-25T11:58:00+08:00').getTime();
+  const D = document.getElementById('cdD'), H = document.getElementById('cdH');
+  const M = document.getElementById('cdM'), S = document.getElementById('cdS');
+  const pad = n => n < 10 ? '0' + n : '' + n;
+  function tick() {
+    let diff = TARGET - Date.now();
+    if (diff <= 0) { D.textContent = H.textContent = M.textContent = S.textContent = '00'; return; }
+    D.textContent = pad(Math.floor(diff / 86400000));
+    H.textContent = pad(Math.floor(diff % 86400000 / 3600000));
+    M.textContent = pad(Math.floor(diff % 3600000 / 60000));
+    S.textContent = pad(Math.floor(diff % 60000 / 1000));
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ============ 背景音乐 ============ */
+const bgm = document.getElementById('bgm');
+let playing = false;
+
+function toggleMusic() {
+  const btn = document.getElementById('musicBtn');
+  const note = btn.querySelector('.music-note');
+  if (playing) {
+    bgm.pause(); playing = false;
+    btn.classList.remove('playing'); note.textContent = '♪';
+  } else {
+    bgm.volume = 0.55;
+    bgm.play().then(() => {
+      playing = true; btn.classList.add('playing'); note.textContent = '♫';
+    }).catch(() => { playing = false; btn.classList.remove('playing'); });
+  }
+}
+
+(function () {
+  const tryPlay = () => {
+    if (playing) return;
+    bgm.volume = 0.55;
+    bgm.play().then(() => {
+      playing = true;
+      const btn = document.getElementById('musicBtn');
+      btn.classList.add('playing');
+      btn.querySelector('.music-note').textContent = '♫';
+    }).catch(() => {});
+    ['touchstart','click','scroll'].forEach(ev =>
+      document.removeEventListener(ev, tryPlay));
+  };
+  document.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+  document.addEventListener('click', tryPlay, { once: true });
+  document.addEventListener('scroll', tryPlay, { once: true, passive: true });
+})();
+
+/* ============ 滚动渐入 ============ */
+(function () {
+  const els = document.querySelectorAll('.fade');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(e => e.classList.add('show')); return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('show'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(e => io.observe(e));
+})();
+</script>
+</body>
+</html>
